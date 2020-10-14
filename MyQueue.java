@@ -23,6 +23,9 @@ public class MyQueue {
 	public void printQueue() {
 		myLinkedList.printMyNodes();
 	}
+	public INode dequeue() {
+		return myLinkedList.pop();
+	}
 
 	public static void main(String[] args) {
 		MyQueue myQueue = new MyQueue();
@@ -33,6 +36,9 @@ public class MyQueue {
 		myQueue.enqueue(node2);
 		myQueue.enqueue(node3);
 		System.out.println("Queue: ");
+		myQueue.printQueue();
+		System.out.println("First element in the queue is deleted: "+myQueue.dequeue().getKey()+"\n");
+		System.out.println("Queue after dequeue operation: ");
 		myQueue.printQueue();
 	}
 
