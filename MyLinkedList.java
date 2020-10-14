@@ -14,8 +14,9 @@ public class MyLinkedList<k> {
 	public int size() {
 		return size;
 	}
+
 	public boolean isEmpty() {
-		return size==0;
+		return size == 0;
 	}
 
 	public void insert(INode<k> myNode, INode<k> newNode) {
