@@ -7,6 +7,13 @@ public class MyStack {
 		this.myLinkedList=new MyLinkedList();
 		
 	}
+	public int size() {
+		return myLinkedList.size();
+	}
+	
+	public boolean isEmpty() {
+		return myLinkedList.isEmpty();
+	}
 	public void push(INode myNode) {
 		myLinkedList.add(myNode);
 	}
@@ -16,5 +23,17 @@ public class MyStack {
 	public INode peak() {
 		return myLinkedList.head;
 	}
+	public INode pop(){
+		return myLinkedList.pop();
+	}
+	public void popTillEmpty() {
+		while(!isEmpty()) {
+			System.out.println("Peaked Element: "+peak().getKey()+"\n");
+			System.out.println("Popped Element: "+pop().getKey()+"\n");
+			System.out.println("\n");
+		}
+		System.out.println("Stack is empty.");
+	}
+	
 
 }
